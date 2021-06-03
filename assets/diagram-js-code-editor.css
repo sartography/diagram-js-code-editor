@@ -2,7 +2,6 @@
   position: absolute;
   top: 90px;
   right: 20px;
-  left: 500px;
   /* overflow: hidden; */
   background-color: rgba(255, 255, 255, 0.9);
   border: solid 1px #CCC;
@@ -12,6 +11,14 @@
   -moz-user-select: none;
   -ms-user-select: none;
   -webkit-user-select: none; */
+}
+.djs-editor:not(.enabled){
+  color: #CCC;
+  pointer-events: none;
+}
+
+.djs-editor.enabled{
+  color: rgb(0, 0, 0);
 }
 
 .djs-editor:not(.open) {
@@ -32,8 +39,17 @@
 }
 
 .djs-editor:not(.open) .toggle {
-  padding: 10px;
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+  content: "dvr" !important;
   text-align: center;
+}
+
+.djs-editor:not(.open) .toggle:before {
+  font-family: "Material Icons", sans-serif;
+  content: "dvr" !important;
+  font-size: 24px;
 }
 
 .djs-editor .toggle:before {
