@@ -1,27 +1,26 @@
-# diagram-js Minimap
+# diagram-js Code Editor
 
-[![Build Status](https://travis-ci.com/bpmn-io/diagram-js-minimap.svg?branch=master)](https://travis-ci.com/bpmn-io/diagram-js-minimap)
+[![Build Status](https://travis-ci.com/bpmn-io/diagram-js-minimap.svg?branch=master)]()
 
-A minimap for diagram-js.
+A code editor for diagram-js.
 
-![Minimap](resources/screenshot.png)
+![Code Editor](resources/screenshot.png)
 
 
 ## Features
 
-* See the whole diagram in the minimap
-* Highlight current viewport
-* Click/drag/scroll the minimap to navigate the diagram
-
+* [x] Modify script tasks with python formatting 
+* [ ] Tests scripts in place with feedback
+* [ ] View externally provided data and functions
 
 ## Usage
 
-Extend your diagram-js application with the minimap module. We'll use [bpmn-js](https://github.com/bpmn-io/bpmn-js) as an example:
+Extend your diagram-js application with the coding module. We'll use [bpmn-js](https://github.com/bpmn-io/bpmn-js) as an example:
 
 ```javascript
 import BpmnModeler from 'bpmn-js/lib/Modeler';
 
-import minimapModule from 'diagram-js-minimap';
+import codingModule from 'diagram-js-code-editor';
 
 var bpmnModeler = new BpmnModeler({
   additionalModules: [
@@ -33,10 +32,10 @@ var bpmnModeler = new BpmnModeler({
 For proper styling integrate the embedded style sheet:
 
 ```html
-<link rel="stylesheet" href="diagram-js-minimap/assets/diagram-js-minimap.css" />
+<link rel="stylesheet" href="diagram-js-minimap/assets/diagram-js-code-editor.css" />
 ```
 
-Please see [this example](https://github.com/bpmn-io/bpmn-js-examples/tree/master/minimap) for a more detailed instruction.
+Please see [this example]() for a more detailed instruction.
 
 
 ## License
