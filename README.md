@@ -24,7 +24,7 @@ import codingModule from 'diagram-js-code-editor';
 
 var bpmnModeler = new BpmnModeler({
   additionalModules: [
-    minimapModule
+    codingModule
   ]
 });
 ```

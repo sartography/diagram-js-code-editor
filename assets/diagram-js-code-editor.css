@@ -46,6 +46,12 @@
   text-align: center;
 }
 
+.djs-editor.open .toggle:before {
+  font-family: "Material Icons", sans-serif;
+  content: "close" !important;
+  font-size: 24px;
+  }
+
 .djs-editor:not(.open) .toggle:before {
   font-family: "Material Icons", sans-serif;
   content: "dvr" !important;
