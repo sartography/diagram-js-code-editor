@@ -1,70 +1,142 @@
  .djs-editor {
-  position: absolute;
-  top: 90px;
-  right: 20px;
-  /* overflow: hidden; */
-  background-color: rgba(255, 255, 255, 0.9);
-  border: solid 1px #CCC;
-  border-radius: 2px;
-  box-sizing: border-box;
-  /* user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -webkit-user-select: none; */
-}
-.djs-editor:not(.enabled){
-  color: #CCC;
-  pointer-events: none;
+   position: absolute;
+   top: 90px;
+   right: 20px;
+   overflow: hidden;
+   background-color: rgba(255, 255, 255, 0.9);
+   border: solid 1px #CCC;
+   border-radius: 2px;
+   box-sizing: border-box;
+   user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   -webkit-user-select: none;
+ }
+
+ .djs-editor:not(.enabled) {
+   color: #CCC;
+   pointer-events: none;
+ }
+
+ .djs-editor.enabled {
+   color: rgb(0, 0, 0);
+ }
+
+ .djs-editor:not(.open) {
+   overflow: hidden;
+ }
+
+ .test:before {
+   content: "build" !important;
+ }
+
+ /* Style the buttons inside the navigation bar */
+
+ .toolbar {
+   display: none;
+   width: 620px;
+   height: 35px;
+   margin-left: 40px;
+ }
+
+ .toolbar button {
+   font-family: "Material Icons", sans-serif;
+   color: #180101;
+   text-align: center;
+   width: 35px;
+   height: 35px;
+   font-size: 24px;
+ }
+
+ /* Change the color of buttons on hover */
+
+ .toolbar button:hover {
+   color: rgb(34, 226, 89);
+ }
+
+ .djs-editor .ide {
+   display: none;
+   width: 620px;
+   height: 280px;
+ }
+
+ .djs-editor.open .ide {
+   display: block;
+ }
+
+ .djs-editor.open .toolbar {
+   display: block;
+   text-align: left;
+   line-height: 35px;
+ }
+
+ .djs-editor:not(.open) .toggle {
+   width: 46px;
+   height: 46px;
+   line-height: 46px;
+   content: "dvr" !important;
+   text-align: center;
+ }
+
+ .djs-editor.open .toggle:before {
+   font-family: "Material Icons", sans-serif;
+   content: "close" !important;
+   font-size: 24px;
+ }
+
+ .djs-editor:not(.open) .toggle:before {
+   font-family: "Material Icons", sans-serif;
+   content: "dvr" !important;
+   font-size: 24px;
+ }
+
+ .djs-editor .toggle:before {
+   content: attr(title);
+ }
+
+ .djs-editor.open .toggle {
+   position: absolute;
+   right: 0;
+   padding: 6px;
+   z-index: 1;
+ }
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  border: none;
 }
 
-.djs-editor.enabled{
-  color: rgb(0, 0, 0);
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-.djs-editor:not(.open) {
-  overflow: hidden;
-}
-
-.djs-editor .ide {
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
   display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
-.djs-editor.open .ide {
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  /* text-decoration: none; */
   display: block;
 }
 
-.djs-editor .ide {
-  width: 620px;
-  height: 280px;
-}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
 
-.djs-editor:not(.open) .toggle {
-  width: 46px;
-  height: 46px;
-  line-height: 46px;
-  content: "dvr" !important;
-  text-align: center;
-}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
 
-.djs-editor.open .toggle:before {
-  font-family: "Material Icons", sans-serif;
-  content: "close" !important;
-  font-size: 24px;
-  }
-
-.djs-editor:not(.open) .toggle:before {
-  font-family: "Material Icons", sans-serif;
-  content: "dvr" !important;
-  font-size: 24px;
-}
-
-.djs-editor .toggle:before {
-  content: attr(title);
-}
-
-.djs-editor.open .toggle {
-  position: absolute;
-  right: 0;
-  padding: 6px;
-  z-index: 1;
-}
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
