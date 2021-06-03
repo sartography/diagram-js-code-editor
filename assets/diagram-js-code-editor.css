@@ -1,0 +1,48 @@
+ .djs-editor {
+  position: absolute;
+  top: 90px;
+  right: 20px;
+  left: 500px;
+  /* overflow: hidden; */
+  background-color: rgba(255, 255, 255, 0.9);
+  border: solid 1px #CCC;
+  border-radius: 2px;
+  box-sizing: border-box;
+  /* user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none; */
+}
+
+.djs-editor:not(.open) {
+  overflow: hidden;
+}
+
+.djs-editor .ide {
+  display: none;
+}
+
+.djs-editor.open .ide {
+  display: block;
+}
+
+.djs-editor .ide {
+  width: 620px;
+  height: 280px;
+}
+
+.djs-editor:not(.open) .toggle {
+  padding: 10px;
+  text-align: center;
+}
+
+.djs-editor .toggle:before {
+  content: attr(title);
+}
+
+.djs-editor.open .toggle {
+  position: absolute;
+  right: 0;
+  padding: 6px;
+  z-index: 1;
+}
