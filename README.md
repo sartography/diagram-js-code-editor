@@ -11,7 +11,7 @@ A code editor for diagram-js.
 
 * [x] Modify script tasks with python formatting 
 * [ ] Tests scripts in place with feedback
-* [ ] View externally provided data and functions
+* [x] View externally provided data and functions
 
 ## Usage
 
@@ -19,20 +19,39 @@ Extend your diagram-js application with the coding module. We'll use [bpmn-js](h
 
 ```javascript
 import BpmnModeler from 'bpmn-js/lib/Modeler';
+import propertiesPanelModule from 'bpmn-js-properties-panel';
+import propertiesProviderModule from 'bpmn-js-properties-panel/lib/provider/camunda';
 
 import codingModule from 'diagram-js-code-editor';
 
+
 var bpmnModeler = new BpmnModeler({
   additionalModules: [
+    propertiesProviderModule,
+    propertiesPanelModule,
     codingModule
   ]
+});
+
+bpmnModeler.get('eventBus').on('editor.validate.request', (request) => {
+  if (isGoodCode(request.code)){
+
+  } else {
+
+  }
+bpmnModeler.get('eventBus').fire('editor.validate.response', {passing: true, msg: "msg"});
+});
+
+bpmnModeler.get('eventBus').on('editor.scripts.request', () => {
+  let scripts = []
+bpmnModeler.get('eventBus').fire('editor.scripts.response', {type: "type", msg: "msg"});
 });
 ```
 
 For proper styling integrate the embedded style sheet:
 
 ```html
-<link rel="stylesheet" href="diagram-js-minimap/assets/diagram-js-code-editor.css" />
+<link rel="stylesheet" href="diagram-js-code-editor/assets/diagram-js-code-editor.css" />
 ```
 
 Please see [this example]() for a more detailed instruction.
