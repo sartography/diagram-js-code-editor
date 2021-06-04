@@ -43,8 +43,13 @@ bpmnModeler.get('eventBus').fire('editor.validate.response', {passing: true, msg
 });
 
 bpmnModeler.get('eventBus').on('editor.scripts.request', () => {
-  let scripts = []
-bpmnModeler.get('eventBus').fire('editor.scripts.response', {type: "type", msg: "msg"});
+  let scripts = [{name: "", description: ""}]
+bpmnModeler.get('eventBus').fire('editor.scripts.response', {scripts: scripts});
+});
+
+bpmnModeler.get('eventBus').on('editor.objects.request', () => {
+  let data = [{userId: "int", description: "string"}]
+bpmnModeler.get('eventBus').fire('editor.scripts.response', {objects: data});
 });
 ```
 

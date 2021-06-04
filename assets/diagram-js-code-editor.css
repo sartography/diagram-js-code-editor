@@ -97,8 +97,8 @@
 .description {
   display: none;
   color: #000 !important;
-  min-width: 300px;
-  background-color: #f2f2f2;
+  min-width: 250px;
+  background-color: #f2f2f2 !important;
 }
 
 .dropdown-content .sub-trigger{
