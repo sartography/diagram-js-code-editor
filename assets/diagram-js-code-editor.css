@@ -2,7 +2,6 @@
    position: absolute;
    top: 90px;
    right: 20px;
-   overflow: hidden;
    background-color: rgba(255, 255, 255, 0.9);
    color: rgb(0, 0, 0);
    border: solid 1px #CCC;
@@ -42,7 +41,6 @@
   float: left;
   margin: 0;
   padding: 0;
-  list-style: none;
   background-color: #f2f2f2;
   border-bottom: 1px solid #ccc;
   border-top: 1px solid #ccc;
@@ -50,8 +48,8 @@
 .toolbar > div {
   float: left;
   display: block;
-  padding: 0px 15px;
   border-right: 1px solid #ccc;
+  padding: 0px 15px;
 }
 
 .toolbar div {
@@ -59,6 +57,7 @@
   font-weight: bold;
   color: #069;
 }
+
 .toolbar div:hover {
   color: #c00;
   background-color: #fff;
@@ -68,31 +67,48 @@
   background-color: rgb(201, 205, 248);
 }
 
-.trigger {
+.dropdown .trigger {
   border: none;
+  padding: 0px;
 }
 
 .dropdown {
-  /* display: inline-block; */
   position: relative;
 }
 
 .dropdown .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f2f2f2;
-  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+  background-color: #f2f2f2 !important;
   z-index: 1;
 }
 
-.dropdown-content a {
-  text-decoration: none;
+.dropdown:hover .dropdown-content {
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content .sub-trigger {
+  text-decoration: none;
+  padding: 0 0 0 15px;
+  border-bottom: 1px solid #ccc;
+  display: block;
+}
 
-.dropdown:hover .dropdown-content {
+.description {
+  display: none;
+  color: #000 !important;
+  min-width: 300px;
+  background-color: #f2f2f2;
+}
+
+.dropdown-content .sub-trigger{
+position: relative;
+}
+.dropdown-content .sub-trigger:hover .description {
+  top: 0;
+  left: 100%;
+
+  position: absolute;
   display: block;
 }
 
@@ -145,7 +161,4 @@
    padding: 6px;
    z-index: 1;
  }
-
-
- /*  */
  
