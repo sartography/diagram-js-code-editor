@@ -1,6 +1,6 @@
 {
   "name": "diagram-js-code-editor",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A code-editor for diagram-js",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -13,8 +13,7 @@
     "test": "",
     "distro": "run-s build test:build",
     "build": "rollup -c",
-    "test:build": "",
-    "prepublishOnly": "run-s distro"
+    "test:build": ""
   },
   "repository": {
     "type": "git",
