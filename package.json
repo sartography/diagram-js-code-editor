@@ -18,18 +18,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:NWalker4483/diagram-js-code-editor.git"
+    "url": "git@github.com:sartography/diagram-js-code-editor.git"
   },
   "keywords": [
     "diagram-js",
     "code-editor"
   ],
-  "author": "Philipp Fromme",
+  "author": "Nile Walker",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NWalker4483/diagram-js-code-editor/issues"
+    "url": "https://github.com/sartography/diagram-js-code-editor/issues"
   },
-  "homepage": "https://github.com/NWalker4483/diagram-js-code-editor#readme",
+  "homepage": "https://github.com/sartography/diagram-js-code-editor#readme",
   "devDependencies": {
     "@types/ace": "0.0.46",
     "chai": "^4.2.0",
