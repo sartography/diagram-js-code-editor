@@ -32,9 +32,12 @@
   "homepage": "https://github.com/sartography/diagram-js-code-editor#readme",
   "devDependencies": {
     "@types/ace": "0.0.46",
+    "@typescript-eslint/eslint-plugin": "^4.28.2",
+    "@typescript-eslint/parser": "^4.28.2",
     "chai": "^4.2.0",
     "diagram-js": "^5.0.2",
-    "eslint": "^6.5.0",
+    "eslint": "^7.30.0",
+    "eslint-config-google": "^0.14.0",
     "eslint-plugin-bpmn-io": "^0.10.0",
     "karma": "^6.3.3",
     "karma-chrome-launcher": "^3.1.0",
@@ -57,12 +60,15 @@
     "webpack": "^4.41.0"
   },
   "dependencies": {
+    "@popperjs/core": "^2.9.2",
     "ace": "^1.3.0",
     "ace-builds": "^1.4.12",
+    "bootstrap": "^5.0.2",
     "codemirror": "^5.61.1",
     "css.escape": "^1.5.1",
     "min-dash": "^3.5.2",
     "min-dom": "^3.1.1",
-    "tiny-svg": "^2.2.2"
+    "tiny-svg": "^2.2.2",
+    "typescript-eslint": "0.0.1-alpha.0"
   }
 }
