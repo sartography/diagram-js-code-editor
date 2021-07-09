@@ -1,6 +1,15 @@
 {
-  "extends": "plugin:bpmn-io/es6",
-  "env": {
-    "browser": true
-  }
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "google"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "rules": {
+    }
 }

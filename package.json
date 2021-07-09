@@ -66,8 +66,10 @@
     "bootstrap": "^5.0.2",
     "codemirror": "^5.61.1",
     "css.escape": "^1.5.1",
+    "jquery": "^3.6.0",
     "min-dash": "^3.5.2",
     "min-dom": "^3.1.1",
+    "popper.js": "^1.16.1",
     "tiny-svg": "^2.2.2",
     "typescript-eslint": "0.0.1-alpha.0"
   }

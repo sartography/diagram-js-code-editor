@@ -1,4 +1,4 @@
-@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap.min.css';
 
 .djs-editor {
    position: absolute;
@@ -21,9 +21,9 @@
    pointer-events: none;
  }
 
- /*.djs-editor:not(.open) {*/
- /*  overflow: hidden;*/
- /*}*/
+ .djs-editor:not(.open) {
+   overflow: hidden;
+ }
 
  .djs-editor:not(.open) .toolbar{
      display: none !important;
@@ -42,9 +42,9 @@
  }
 
  .toolbar {
-     position: relative;
-     z-index: 1;
-     padding-left: 40px;
+     /*position: relative;*/
+     /*z-index: 1;*/
+     /*padding-left: 40px;*/
  }
 
  #run_btn {
@@ -76,8 +76,8 @@
  }
 
  .djs-editor .ide {
-   position: relative;
-   z-index: 0;
+   /*position: relative;*/
+   /*z-index: 0;*/
    display: none;
    width: 100%;
    min-width: 420px;
@@ -112,5 +112,11 @@
    position: absolute;
    right: 0;
    padding: 6px;
-   z-index: 1;
+   /*z-index: 1;*/
  }
+
+ .errorMarker {
+  position:absolute;
+  background:rgba(100,200,100,0.5);
+  z-index:20
+}
