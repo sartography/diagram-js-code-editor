@@ -1,122 +1,170 @@
 @import 'bootstrap.min.css';
 
-.djs-editor {
-   position: absolute;
-   top: 90px;
-   list-style-type: none;
-   right: 20px;
-   background-color: rgba(255, 255, 255, 0.9);
-   color: rgb(0, 0, 0);
-   border: solid 1px #CCC;
-   border-radius: 2px;
-   box-sizing: border-box;
-   user-select: none;
-   -moz-user-select: none;
-   -ms-user-select: none;
-   -webkit-user-select: none;
- }
-
- .djs-editor:not(.enabled) {
-   color: #CCC;
-   pointer-events: none;
- }
-
- .djs-editor:not(.open) {
-   overflow: hidden;
- }
-
- .djs-editor:not(.open) .toolbar{
-     display: none !important;
- }
-
- .djs-editor.open .toolbar {
-   display: block;
- }
-
- .djs-editor:not(.open) .ide {
-   display: none !important;
- }
-
- .djs-editor.open .ide {
-   display: block;
- }
-
- .toolbar {
-     /*position: relative;*/
-     /*z-index: 1;*/
-     /*padding-left: 40px;*/
- }
-
- #run_btn {
-   font-family: "Material Icons", sans-serif;
- }
-
- #exit_btn {
-   font-family: "Material Icons", sans-serif;
- }
-
-  #exit_btn:before {
-   content: "close";
- }
-
- #run_btn:before {
-   content: "build";
- }
-
- #run_btn.passing {
-   color: green;
- }
-
- #run_btn.failing {
-   color: red;
- }
-
- #run_btn.unknown {
-   color: rgba(207, 168, 10, 0.842);
- }
-
- .djs-editor .ide {
-   /*position: relative;*/
-   /*z-index: 0;*/
-   display: none;
-   width: 100%;
-   min-width: 420px;
-   height: 280px;
- }
-
- .djs-editor:not(.open) .toggle {
-   width: 46px;
-   height: 46px;
-   line-height: 46px;
-   content: "dvr" !important;
-   text-align: center;
- }
-
- .djs-editor.open .toggle:before {
-   font-family: "Material Icons", sans-serif;
-   content: "close" !important;
-   font-size: 24px;
- }
-
- .djs-editor:not(.open) .toggle:before {
-   font-family: "Material Icons", sans-serif;
-   content: "dvr" !important;
-   font-size: 24px;
- }
-
- .djs-editor .toggle:before {
-   content: attr(title);
- }
-
- .djs-editor.open .toggle {
-   position: absolute;
-   right: 0;
-   padding: 6px;
-   /*z-index: 1;*/
- }
-
- .errorMarker {
-  position:absolute;
-  background:rgba(100,200,100,0.5);
-  z-index:20
+/*Window*/
+.djs-container{
+overflow: visible !important;
 }
+
+.djs-editor {
+position: absolute;
+top: 90px;
+right: 20px;
+background-color: rgba(255, 255, 255, 0.9);
+color: rgb(0, 0, 0);
+border: solid 1px #CCC;
+border-radius: 2px;
+box-sizing: border-box;
+}
+
+/*Toggle*/
+.djs-editor:not(.enabled) {
+color: #CCC; /*Grayed Out*/
+pointer-events: none;
+}
+/* Toolbar*/
+.toolbar {
+display: none;
+}
+
+.nav-item {
+display: inline-block;/* or inline-block*/
+padding: .5rem 1rem;
+}
+
+.djs-editor.open .toolbar{
+display: block;
+}
+
+#run_icon {
+font-family: "Material Icons", sans-serif;
+color: inherit;
+}
+
+#run_icon:before {
+content: "build";
+}
+
+.passing {
+color: green !important;
+}
+
+.failing {
+color: red !important;
+}
+
+.unknown {
+color: rgba(207, 168, 10, 0.842) !important;
+}
+
+.description {
+display: none;
+position: absolute;
+background-color: white;
+left:110%;
+min-width: 150px;
+padding: 0 20px;
+border: solid 5px #CCC;
+border-radius: 5px;
+-webkit-box-decoration-break: clone;
+box-decoration-break: clone;
+}
+
+li:hover > .description {
+display: block;
+}
+
+.data-type {
+position: absolute;
+bottom: 0;
+right: 8px;
+display: block;
+font-size: 14px;
+font-weight: lighter;
+}
+
+.undefined{
+color: black;
+}
+
+.number{
+color: red;
+}
+
+.string{
+color: green;
+}
+
+.boolean{
+color: blue;
+}
+
+
+/*Ide*/
+
+.djs-editor.open .ide {
+display: block;
+}
+
+.djs-editor .ide {
+display: none;
+width: 100%;
+min-width: 420px;
+height: 280px;
+}
+
+.dropdown-menu {
+height: auto;
+max-height: 200px;
+}
+
+.djs-editor:not(.open) .toggle {
+width: 46px;
+height: 46px;
+line-height: 46px;
+content: "dvr" !important;
+text-align: center;
+}
+
+.djs-editor.open .toggle:before {
+font-family: "Material Icons", sans-serif;
+content: "close" !important;
+font-size: 24px;
+}
+
+.djs-editor:not(.open) .toggle:before {
+font-family: "Material Icons", sans-serif;
+content: "dvr" !important;
+font-size: 24px;
+}
+
+.djs-editor .toggle:before {
+content: attr(title);
+}
+
+.djs-editor.open .toggle {
+position: absolute;
+right: 0;
+padding: 6px;
+}
+
+.toggle {
+    z-index: 4;
+}
+
+.errorMarker {
+position:absolute;
+background:rgba(200,100,100,0.5);
+z-index:3;
+}
+
+.dropdown-menu li{ position: relative; 	}
+.nav-item .submenu{
+display: none;
+position: absolute;
+left:100%; top:-7px;
+}
+.nav-item .submenu-left{
+right:100%; left:auto;
+}
+.dropdown-menu > li:hover { background-color: #f1f1f1 }
+.dropdown-menu > li:hover > .submenu{ display: block; }
