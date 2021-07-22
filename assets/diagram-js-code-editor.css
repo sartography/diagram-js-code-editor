@@ -115,6 +115,9 @@ height: 280px;
 .dropdown-menu {
 height: auto;
 max-height: 200px;
+    overflow-scrolling: auto;
+    /*overflow-y: scroll;*/
+    /*overflow-x: hidden;*/
 }
 
 .djs-editor:not(.open) .toggle {
