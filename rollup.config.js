@@ -6,7 +6,7 @@ import pkg from './package.json';
 
 const srcEntry = pkg.source;
 const umdDist = pkg[ 'umd:main' ];
-const umdName = 'DiagramJSMinimap';
+const umdName = 'DiagramJSCodeEditor';
 
 function pgl(plugins=[]) {
   return plugins;
@@ -51,7 +51,8 @@ export default [
       'css.escape',
       'min-dash',
       'min-dom',
-      'tiny-svg'
+      'tiny-svg',
+      '@popperjs/core' // TODO: Add bootstrap solely as a node pkg dep
     ],
     plugins: pgl()
   }
