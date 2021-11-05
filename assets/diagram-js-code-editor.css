@@ -16,6 +16,15 @@ border-radius: 2px;
 box-sizing: border-box;
 }
 
+.ace_editor {
+    position: absolute;
+    bottom: 0;
+    right: 8px;
+    display: block;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
 /*Toggle*/
 .djs-editor:not(.enabled) {
 color: #CCC; /*Grayed Out*/
@@ -102,7 +111,8 @@ color: blue;
 /*Ide*/
 
 .djs-editor.open .ide {
-display: block;
+    width: 600px;
+    display: block;
 }
 
 .djs-editor .ide {
@@ -114,10 +124,20 @@ height: 280px;
 
 .dropdown-menu {
 height: auto;
-max-height: 200px;
     overflow-scrolling: auto;
     /*overflow-y: scroll;*/
     /*overflow-x: hidden;*/
+}
+
+.dropdown-menu.show {
+    /*
+     See - https://stackoverflow.com/questions/3550795/is-it-possible-to-have-a-popup-div-that-breaks-out-of-an-overflowscroll-or-ov
+     for limitations on having a popout element from a scroll menu.
+     in the future, this could be updated to calculate the position of the
+     popout element in JS.
+     */
+    /* overflow-x: hidden;
+    overflow-y: auto; */
 }
 
 .djs-editor:not(.open) .toggle {
@@ -160,7 +180,7 @@ background:rgba(200,100,100,0.5);
 z-index:3;
 }
 
-.dropdown-menu li{ position: relative; 	}
+.dropdown-menu li{ }
 .nav-item .submenu{
 display: none;
 position: absolute;
@@ -170,4 +190,4 @@ left:100%; top:-7px;
 right:100%; left:auto;
 }
 .dropdown-menu > li:hover { background-color: #f1f1f1 }
-.dropdown-menu > li:hover > .submenu{ display: block; }
+.dropdown-menu > li:hover > .submenu{ position: absolute; display: block; }

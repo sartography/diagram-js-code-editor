@@ -51,7 +51,8 @@ export default [
       'css.escape',
       'min-dash',
       'min-dom',
-      'tiny-svg'
+      'tiny-svg',
+      'ace-builds/src-noconflict/ace',
     ],
     plugins: pgl()
   }
